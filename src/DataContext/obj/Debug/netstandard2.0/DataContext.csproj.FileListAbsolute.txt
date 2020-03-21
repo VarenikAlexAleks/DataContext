@@ -1,0 +1,8 @@
+/home/noname/projects/DataContext/src/DataContext/bin/Debug/netstandard2.0/DataContext.deps.json
+/home/noname/projects/DataContext/src/DataContext/bin/Debug/netstandard2.0/DataContext.dll
+/home/noname/projects/DataContext/src/DataContext/bin/Debug/netstandard2.0/DataContext.pdb
+/home/noname/projects/DataContext/src/DataContext/obj/Debug/netstandard2.0/DataContext.csprojAssemblyReference.cache
+/home/noname/projects/DataContext/src/DataContext/obj/Debug/netstandard2.0/DataContext.AssemblyInfoInputs.cache
+/home/noname/projects/DataContext/src/DataContext/obj/Debug/netstandard2.0/DataContext.AssemblyInfo.cs
+/home/noname/projects/DataContext/src/DataContext/obj/Debug/netstandard2.0/DataContext.dll
+/home/noname/projects/DataContext/src/DataContext/obj/Debug/netstandard2.0/DataContext.pdb

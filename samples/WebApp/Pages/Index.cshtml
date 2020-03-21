@@ -1,0 +1,75 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<form method="post" action="">
+    <label for="AddCategory.Name">Category Name</label>
+    <input type="text" id="AddCategory.Name" asp-for="AddCategory.Name">
+    <button type="submit" asp-page-handler="AddCategory" class="btn btn-primary">Add Category</button>
+</form>
+<br/>
+<form method="post" action="">
+    <label for="AddProduct.Name">Product Name</label>
+    <input type="text" id="AddProduct.Name" asp-for="AddProduct.Name">
+     <label for="AddProduct.CategoryId">Category</label>
+    <select  id="AddProduct.CategoryId" asp-for="AddProduct.CategoryId" >
+        @foreach (var item in Model.Categories)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select>
+    
+    <button type="submit" asp-page-handler="AddProduct" class="btn btn-primary">Add Product</button>
+</form>
+<div class="text-center">
+    
+            <table class="table">
+     <thead>
+        <tr>
+            <th>
+                Ключ
+            </th>
+            <th>
+                    <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort" asp-route-changeOrder="1" >
+                    Имя @(Model.NameSort == "name" ? "▲" : "▼")
+                </a>
+            </th>
+            <th>
+                Категория
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+        @foreach (var item in Model.Products)
+        {
+                    
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Category</td>
+                </tr>
+        }
+            </table>
+    @{
+    var prevDisabled = !Model.Products.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Products.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-pageIndex="@(Model.Products.PageIndex - 1)"
+   asp-route-sortOrder="@Model.NameSort"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-pageIndex="@(Model.Products.PageIndex + 1)"
+   asp-route-sortOrder="@Model.NameSort"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>
+
+</div>
+

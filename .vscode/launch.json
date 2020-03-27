@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/tests/DataContext.UnitTests/bin/Debug/netcoreapp3.1/DataContext.UnitTests.dll",
+            "program": "${workspaceFolder}/samples/DesktopApp/bin/Debug/netcoreapp3.1/DesktopApp.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/tests/DataContext.UnitTests",
+            "cwd": "${workspaceFolder}/samples/DesktopApp",
             "console": "internalConsole",
             "stopAtEntry": false
         },

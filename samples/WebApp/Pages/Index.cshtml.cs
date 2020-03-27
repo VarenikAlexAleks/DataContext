@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using WebApp.Data;
+using DataApp.Data;
 
 namespace WebApp.Pages
 {
@@ -13,7 +13,7 @@ namespace WebApp.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        private readonly WebAppData data;
+        private readonly AppData data;
         public PaginatedList<ProductWithCategory> Products;
         public List<Category> Categories;
 
@@ -23,7 +23,7 @@ namespace WebApp.Pages
         [BindProperty]
         public Product AddProduct { get; set; }
         public string NameSort { get; set; } //= "name";
-        public IndexModel(ILogger<IndexModel> logger, WebAppData data)
+        public IndexModel(ILogger<IndexModel> logger, AppData data)
         {
             _logger = logger;
             this.data = data;

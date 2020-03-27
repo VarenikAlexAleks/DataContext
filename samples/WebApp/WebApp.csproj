@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="3.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\src\DataContext\DataContext.csproj" />
+    <ProjectReference Include="..\DataApp\DataApp.csproj" />
   </ItemGroup>
 
 

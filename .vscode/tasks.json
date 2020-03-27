@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/tests/DataContext.UnitTests/DataContext.UnitTests.csproj",
+                "${workspaceFolder}/samples/DesktopApp/DesktopApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

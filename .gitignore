@@ -1,0 +1,10 @@
+src/DataContext/bin/
+src/DataContext/obj/
+samples/DataApp/bin/
+samples/DataApp/obj/
+samples/WebApp/bin/
+samples/WebApp/obj/
+samples/DesktopApp/bin/
+samples/DesktopApp/obj/
+tests/DataContext.UnitTests/bin/
+tests/DataContext.UnitTests/obj/

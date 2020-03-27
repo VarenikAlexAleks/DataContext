@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:DesktopApp.ViewModels;assembly=DesktopApp"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DesktopApp.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="DesktopApp"
+        Width="800"
+        Height="600"
+        WindowStartupLocation="CenterScreen">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions >
+        <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button  Grid.Row="0"  Grid.Column="0" Margin="5" Command="{Binding $parent[Window].DataContext.AddProduct}" CommandParameter="{Binding $parent[Window]}">Add Product</Button>
+        <TextBlock FontSize="16" FontWeight="SemiBold" 
+                  Grid.Row="1"  Grid.Column="0"  VerticalAlignment="Center" Text="Search for: "/>
+        <TextBox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"  Margin="6 0 0 0" Text="{Binding Term}" AcceptsReturn="True" />
+         <DataGrid    x:Name="searchResultsListBox" Grid.ColumnSpan="3" 
+                 Grid.Row="2" Margin="0,6,0,0" AutoGenerateColumns="True" Items="{Binding SearchResults}"/>
+    </Grid>
+
+</Window>
